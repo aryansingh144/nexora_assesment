@@ -4,6 +4,7 @@ import ItemCard from "../components/ItemCard";
 
 
 export default function ItemPage() {
+  
 
   const [items, setItems] = useState([]);
   const [mode, setMode] = useState("local");
@@ -31,7 +32,7 @@ export default function ItemPage() {
 
   return (
     <div className="w-full min-h-screen bg-black text-white p-5">
-      {/* header + toggle */}
+      {/* header and toggle  */}
       <div className="mt-20 flex items-center justify-between gap-4">
         <div className="inline-flex gap-2 items-center text-[30px] md:text-[35px] font-bold">
           <p
@@ -63,14 +64,7 @@ export default function ItemPage() {
           >
             Live
           </button>
-          {/* <button
-            onClick={() => load()}
-            className="px-3 py-1.5 rounded-xl text-sm font-medium bg-white/10 border border-white/30 hover:bg-white/20"
-            title="Refresh"
-          >
-            Refresh
-          </button> */}
-          
+
         </div>
       </div>
 

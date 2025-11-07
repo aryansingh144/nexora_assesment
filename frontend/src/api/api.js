@@ -12,6 +12,9 @@ async function j(method, path, body) {
   }
   return res.json();
 }
+//extra stuff to manage both local and api items 
+// mode: 'local' -> /api/items, 
+//'live' -> /api/products/live
 
 export async function getItems(mode = "local") {
   if (mode === "live") {

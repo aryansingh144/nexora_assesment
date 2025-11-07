@@ -1,3 +1,2 @@
-
-// Keep the cart in memory
+//in memory one
 export const CART = [];

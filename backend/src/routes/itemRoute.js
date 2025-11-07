@@ -6,11 +6,13 @@ const router = Router();
 
 
 // GET /api/items
+// local mock (offline, reliable)
 router.get('/items', (req, res) => {
   res.json({items});
 });
 
 //api calling
+// fakestore mapped
 router.get("/products/live", async (_req, res) => {
   try {
     const { data } = await axios.get("https://fakestoreapi.com/products?limit=8");
@@ -22,7 +24,10 @@ router.get("/products/live", async (_req, res) => {
     }));
     res.json(mapped);
   } catch {
-    res.status(500).json({ error: "Failed to fetch products" });
+    res.status(500).json(
+        { error: "Failed to fetch products" 
+
+        });
   }
 });
 
